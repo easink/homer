@@ -1,0 +1,61 @@
+/* This file is for your main application css. */
+
+/* @import "./phoenix.css"; */
+/* @import "./clock.css"; */
+@import "./clock2.css";
+/* @import "./cube.css"; */
+@import "./kuben.css";
+@import "./unlimited_cube.css";
+/* @import "../../deps/phoenix_live_view/assets/css/live_view.css"; */
+
+body {
+    margin: 0px;
+}
+
+.alert {
+  margin: 0px;
+}
+
+.container {
+    height: 100vh;
+    width: 100vw;
+    /* margin: 0px; */
+    /* padding: 0px; */
+    /* border: 0px; */
+}
+
+/* workaround to make cube height fix */
+.phx-connected {
+  height: 100%;
+  width: 100%;
+}
+.phx-disconnected {
+  height: 100%;
+  width: 100%;
+}
+
+.grid-container {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  /* padding: 2px; */
+  /* border: 0px; */
+  /* border-style: solid; */
+  grid-template-columns: repeat(var(--cols), 1fr);
+  grid-template-rows: repeat(var(--rows), 1fr);
+  grid-column-gap: 4px;
+  grid-row-gap: 4px;
+}
+
+.title {
+}
+
+.unselectable {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+

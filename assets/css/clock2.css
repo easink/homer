@@ -1,0 +1,173 @@
+body {
+   background: #ccc;
+}
+
+.clock {
+   position: relative;
+   width: 350px;
+   height: 350px;
+   background: #ececec;
+   border: 12px solid #5c5c5c;
+   border-radius: 50%;
+   margin: auto;
+   /* margin: 8% auto 0; */
+   box-shadow: 1px 14px 21px 0 rgba(0,0,0,.2);
+}
+
+.clock > span {
+   display: inline-block;
+}
+
+.clock-dot {
+   position: absolute;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   margin: auto;
+   width: 16px;
+   height: 16px;
+   border-radius: 50%;
+   background: radial-gradient(ellipse 20px 15px at 50% 0, #ececec 40%, #5c5c5c 80%);
+   z-index: 10;
+   box-shadow: 0 2px 5px 0 rgba(0,0,0,.3);
+}
+
+.clock-sec-hand {
+   position: absolute;
+   top: 39px;
+   left: 50%;
+   margin-left: -7px;
+   width: 14px;
+   height: 162px;
+   /* background: url('https://themegion.github.com/AnalogClock/sec.svg') 50% 50% no-repeat; */
+   background: url('/images/AnalogClock/sec.svg') 50% 50% no-repeat;
+   z-index: 9;
+   transform: rotate(var(--clocksecdeg));
+   transform-origin: 50% 136px;
+}
+
+.clock-sec-hand.shadow {
+   top: 46px;
+   margin-left: -4px;
+   background-image: url('/images/AnalogClock/sec-shdw.svg');
+   opacity: .1;
+   z-index: 8;
+   filter: blur(2px);
+}
+
+.clock-min-hand {
+   position: absolute;
+   top: 51px;
+   left: 50%;
+   margin-left: -8px;
+   width: 16px;
+   height: 144px;
+   background: url('/images/AnalogClock/min.svg') 50% 50% no-repeat;
+   z-index: 7;
+   transform: rotate(var(--clockmindeg));
+   transform-origin: 50% 124px;
+}
+
+.clock-min-hand.shadow {
+   top: 58px;
+   margin-left: -5px;
+   background-image: url('/images/AnalogClock/min-shdw.svg');
+   opacity: .1;
+   z-index: 6;
+   filter: blur(2px);
+}
+
+.clock-hour-hand {
+   position: absolute;
+   top: 85px;
+   left: 50%;
+   margin-left: -7px;
+   width: 14px;
+   height: 110px;
+   background: url('/images/AnalogClock/hour.svg') 50% 50% no-repeat;
+   z-index: 5;
+   transform: rotate(var(--clockhourdeg));
+   transform-origin: 50% 90px;
+}
+
+.clock-hour-hand.shadow {
+   top: 92px;
+   margin-left: -4px;
+   background-image: '/images/AnalogClock/hour-shdw.svg';
+   opacity: .1;
+   z-index: 4;
+   filter: blur(2px);
+}
+
+.clock-twelve,
+.clock-three,
+.clock-six,
+.clock-nine {
+   position: absolute;
+   font-family: Lato, sans-serif;
+   font-size: 32px;
+   color: #777;
+}
+
+.clock-twelve {
+   top: 35px;
+   left: 155px;
+}
+
+.clock-three {
+   top: 156px;
+   right: 39px;
+}
+
+.clock-six {
+   left: 165px;
+   bottom: 35px;
+}
+
+.clock-nine {
+   top: 156px;
+   left: 39px;
+}
+
+.clock-lines {
+   position: absolute;
+   top: 15px;
+   left: 50%;
+   margin-left: -1px;
+   width: 2px;
+   height: 10px;
+   background: #b3b3b0;
+   z-index: 1;
+   transform: rotate(var(--diallinedeg));
+   transform-origin: 50% 160px;
+}
+
+.clock-lines:nth-of-type(5n) {
+   position: absolute;
+   top: 10px;
+   left: 50%;
+   margin-left: -2px;
+   width: 4px;
+   height: 25px;
+   background: #b3b3b0;
+   z-index: 1;
+   transform-origin: 50% 165px;
+}
+
+.clock-date {
+   position: absolute;
+   top: 242px;
+   left: 50%;
+   margin-left: -18px;
+   width: 36px;
+   height: 30px;
+   background: #83837a;
+   border-radius: 6px;
+   font-family: 'Fjalla One', sans-serif;
+   font-size: 21px;
+   line-height: 30px;
+   color: white;
+   text-align: center;
+   box-shadow: inset 0 2px 2px 0 rgba(0,0,0,.3), inset 0 -2px 2px 0 rgba(255,255,255,.2);
+}

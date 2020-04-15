@@ -1,0 +1,63 @@
+/* :root { */
+/*     --ucubesize: calc(var(--ucubewidth) / 2); */
+/*     --ucubesize: calc(-1 * var(--ucubesize)); */
+/* } */
+
+.ucube__scene {
+  width: 100%;
+  height: 100%;
+  /* border: 1px solid #CCC; */
+  /* margin: 80px; */
+  /* perspective: 200px; */
+  perspective: calc(var(--ucubewidth) * 2);
+}
+
+.ucube.overlay-left {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  z-index: 10;
+  /* background-color: rgba(100,100,0,0.5); */ /*dim the background*/
+  transform: translateZ(calc(0.05 * var(--ucubewidth) / 2)) ;
+}
+
+.ucube.overlay-right {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 50%;
+  height: 100%;
+  z-index: 10;
+  /* background-color: rgba(0,100,100,0.5); */ /*dim the background*/
+  transform: translateZ(calc(0.05 * var(--ucubewidth) / 2)) ;
+  /* transform: translateZ(calc(-1 * var(--ucubewidth) / 2)) ; */
+}
+
+.ucube {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transform: translateZ(calc(-1 * var(--ucubewidth) / 2)) ;
+}
+
+.ucube__face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 2px solid black;
+  font-size: 40px;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+}
+
+.ucube__face { background: rgba( 40, 0, 0, 0.7); }
+/* .ucube__face--front  { background: rgb( 40, 0, 0); } */
+/* .ucube__face--right  { background: rgb( 60, 0, 0); } */
+/* .ucube__face--left   { background: rgb(180, 0, 0); } */
+/* .ucube__face--front  { background: hsla(  0, 100%, 50%, 0.7); } */
+/* .ucube__face--right  { background: hsla( 60, 100%, 50%, 0.7); } */
+/* .ucube__face--left   { background: hsla(180, 100%, 50%, 0.7); } */

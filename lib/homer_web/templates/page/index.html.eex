@@ -1,0 +1,27 @@
+<div class="grid-container" style="--cols: 3; --rows: 3;">
+  <div class="grid-item">
+    <section class="phx-hero">
+      <center>
+      <h1><%= gettext "Welcome to %{name}!", name: "Homer" %></h1>
+      <p>A marvelous home assistant.</p>
+      </center>
+    </section>
+  </div>
+  <div class="grid-item unselectable" >
+    <%= live_render(@conn, HomerWeb.Live.Widget.Clock2) %>
+    <%# <%= live_render(@conn, HomerWeb.Live.Widget.Clock) %1> %>
+  </div>
+  <div class="grid-item unselectable">
+    <%= live_render(@conn, HomerWeb.Live.Widget.UnlimitedCube, session: %{"sides" => ["1", "2", "3"]}) %>
+  </div>
+  <div class="grid-item unselectable">
+    <%= live_render(@conn, HomerWeb.Live.Widget.Cube) %>
+  </div>
+  <div class="grid-item unselectable">
+    <%= live_render(@conn, HomerWeb.Live.Widget.UnlimitedCube, session: %{"sides" => ["one", "two"]}) %>
+  </div>
+  <div class="grid-item">6</div>
+  <div class="grid-item">7</div>
+  <div class="grid-item">8</div>
+  <div class="grid-item">9</div>
+</div>
